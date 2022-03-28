@@ -1,5 +1,5 @@
 {
-  "name": "keypress-timer",
+  "name": "typetimer",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -9,7 +9,7 @@
   "author": "Robin Kim <robincodes@pm.me>",
   "repository": {
     "type": "git",
-    "url": "github:therobinkim/keypress-timer"
+    "url": "github:therobinkim/typetimer"
   },
   "license": "ISC",
   "devDependencies": {
