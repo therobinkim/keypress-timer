@@ -24,7 +24,9 @@
       previous = now;
 
       var paragraph = document.createElement('p');
-      var text = document.createTextNode(`${event.key}: ${timeLapsed}`);
+      var key = event.key === ' ' ? 'Space' : event.key; // prevent ' ' from rendering as nothing in HTML
+
+      var text = document.createTextNode(`${key}: ${timeLapsed}`);
       paragraph.append(text);
 
       document.getElementById('output')
