@@ -8,7 +8,7 @@
 </head>
 <body>
   <p>
-    Use the textarea below to figure out how much time passes between each keypress when you type.
+    Type in the textarea below to see how many milliseconds pass between each keypress.
   </p>
 
   <label for="type-here">Type here:</label><br />
@@ -26,7 +26,7 @@
       var paragraph = document.createElement('p');
       var key = event.key === ' ' ? 'Space' : event.key; // prevent ' ' from rendering as nothing in HTML
 
-      var text = document.createTextNode(`${key}: ${timeLapsed}`);
+      var text = document.createTextNode(`${key}: ${timeLapsed}ms`);
       paragraph.append(text);
 
       document.getElementById('output')
