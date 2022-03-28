@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time between keypresses</title>
+</head>
+<body>
+  <p>
+    Use the textarea below to figure out how much time passes between each keypress when you type.
+  </p>
+
+  <label for="type-here">Type here:</label><br />
+  <textarea id="type-here" name="type-here" rows="5" cols="33" onkeydown="handleInput(event)"></textarea>
+
+  <div id="output"></div>
+
+  <script>
+    var previous = new Date();
+    function handleInput(event) {
+      var now = new Date();
+      var timeLapsed = now - previous;
+      previous = now;
+
+      var paragraph = document.createElement('p');
+      var text = document.createTextNode(`${event.key}: ${timeLapsed}`);
+      paragraph.append(text);
+
+      document.getElementById('output')
+        .prepend(paragraph); // TO DO: maybe batch 5 at a time?
+    }
+  </script>
+
+  <style>
+    p {
+      margin: 0;
+    }
+  </style>
+</body>
+</html>

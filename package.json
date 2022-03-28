@@ -1,0 +1,18 @@
+{
+  "name": "keypress-timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin Kim <robincodes@pm.me>",
+  "repository": {
+    "type": "git",
+    "url": "github:therobinkim/keypress-timer"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
